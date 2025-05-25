@@ -197,4 +197,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // Impact Counter: عداد المستفيدين التفاعلي
+    let counter = 13022;
+    setInterval(()=>{
+      counter++;
+      const impactCounter = document.getElementById('impact-counter');
+      if (impactCounter) {
+        impactCounter.innerText = counter + " Lives Impacted";
+      }
+    }, 4000); // كل 4 ثواني يزيد العداد
 });
