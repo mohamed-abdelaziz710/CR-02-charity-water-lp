@@ -338,6 +338,62 @@ h1, h2, h3 {
     }
 }
 
+/* Testimonial Section */
+.testimonial-section {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--light);
+    border-top: 3px solid var(--primary-blue);
+    border-bottom: 3px solid var(--primary-blue);
+}
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+.testimonial-box {
+    flex: 1;
+    max-width: 300px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin: 0 auto;
+}
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border: 2px solid var(--accent-yellow);
+}
+blockquote {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+.testimonial-author {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+/* Responsive Design for Testimonial Section */
+@media (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column; /* Stack testimonials vertically on mobile */
+        gap: 1rem;
+    }
+    .testimonial-box {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+
 /* ===========================
    Responsive Design for Tablets
    ===========================
