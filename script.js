@@ -128,4 +128,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Live Counter Update
+    const counterElement = document.getElementById('counter');
+    let currentCount = 13000;
+
+    function updateCounter() {
+        currentCount += Math.floor(Math.random() * 5) + 1; // Increment by a random number between 1 and 5
+        counterElement.textContent = currentCount.toLocaleString(); // Update the counter with a formatted number
+    }
+
+    setInterval(updateCounter, 3000); // Update the counter every 3 seconds
 });

@@ -601,3 +601,21 @@ blockquote {
         font-size: 0.9rem;
     }
 }
+
+/* Live Counter Styles */
+.live-counter {
+    text-align: center;
+    margin-top: 1rem;
+    font-family: var(--heading-font);
+    color: var(--primary-blue);
+}
+
+.live-counter p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.live-counter #counter {
+    font-size: 2rem;
+    font-weight: bold;
+}
