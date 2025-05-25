@@ -94,7 +94,8 @@ h1, h2, h3 {
 /* Hero Section */
 .hero-section {
     position: relative;
-    background: var(--primary-blue); /* Fallback background color */
+    background: var(--primary-blue) url('img/hero-bg.jpg') no-repeat center center; /* Add background image */
+    background-size: cover; /* Ensure the image covers the entire section */
     color: var(--light);
     min-height: 400px;
     display: flex;
@@ -108,19 +109,10 @@ h1, h2, h3 {
     overflow: hidden; /* Ensure content stays within bounds */
 }
 .hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Place the image behind the content */
-    overflow: hidden;
+    display: none; /* Remove the separate hero-bg image container */
 }
 .hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the entire section */
-    object-position: center; /* Center the image */
+    display: none; /* Hide the hero-img as the background image is now applied to the section */
 }
 .hero-content {
     background: rgba(255, 255, 255, 0.92); /* Semi-transparent background for readability */
