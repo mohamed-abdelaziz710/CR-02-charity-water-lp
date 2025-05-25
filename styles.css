@@ -59,21 +59,36 @@ h1, h2, h3 {
     color: var(--primary-blue);
     font-size: 1.5rem;
 }
+
+/* Center navigation links */
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    justify-content: center; /* Center the links */
+    gap: 2rem; /* Add space between links */
+    padding: 0;
+    margin: 0;
 }
 .main-nav a {
     color: var(--dark);
     font-weight: bold;
     text-decoration: none;
 }
+
+/* Adjust donate button in navigation */
 .donate-btn {
     background: var(--accent-yellow);
     color: var(--dark) !important;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+.donate-btn:hover {
+    background: var(--primary-blue);
+    color: var(--light);
+    transform: translateY(-3px);
 }
 
 /* Hero Section */
