@@ -179,4 +179,22 @@ document.addEventListener('DOMContentLoaded', function() {
     if (donationInput) {
         donationInput.addEventListener('input', showImpact);
     }
+    
+    // Newsletter Signup (simple feedback, no backend)
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterEmail = document.getElementById('newsletter-email');
+    const newsletterMsg = document.getElementById('newsletter-message');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (newsletterEmail.value.trim() === '') {
+                newsletterMsg.textContent = 'Please enter your email.';
+                newsletterMsg.style.color = '#F5402C';
+            } else {
+                newsletterMsg.textContent = 'Thank you for subscribing!';
+                newsletterMsg.style.color = '#0099cc';
+                newsletterForm.reset();
+            }
+        });
+    }
 });
