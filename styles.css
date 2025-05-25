@@ -173,6 +173,7 @@ a:hover {
 
 /* ===== قسم الهيرو ===== */
 .hero-section {
+    /* To change the hero background image, replace 'hero-bg.jpg' below with your own image file in the images/ folder */
     height: 100vh;
     min-height: 600px;
     background-image: url('images/hero-bg.jpg'); /* ستضاف لاحقاً */

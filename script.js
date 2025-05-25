@@ -1,3 +1,37 @@
+/*
+=====================================
+WATER HOPE CHARITY LANDING PAGE
+CUSTOMIZATION GUIDE FOR STUDENTS
+=====================================
+
+This JavaScript file controls the interactive features of your charity landing page.
+Here's how you can customize different parts:
+
+1. DONATION AMOUNTS:
+   - To change donation amounts, look for lines with 'data-amount'
+   - Current amounts: $10, $40, $100
+   - You can modify the impact messages below in the updateDonationImpact() function
+
+2. DONATION IMPACT MESSAGES:
+   - Find the updateDonationImpact() function (around line 45)
+   - Change the text inside the single quotes to customize what each donation accomplishes
+   - Example: 'Your donation of $10 will provide clean water to 1 person'
+
+3. MOBILE MENU:
+   - The mobile menu automatically works with your HTML
+   - Make sure your HTML has elements with classes 'mobile-menu-toggle' and 'main-nav'
+
+4. SMOOTH SCROLLING:
+   - This makes navigation links scroll smoothly to different sections
+   - Works automatically with any links that start with '#'
+
+5. DONATION TYPES:
+   - Currently supports 'monthly' and 'one-time' donations
+   - You can modify the messages for each type in the updateDonationImpact() function
+
+Remember: Always test your changes by opening the HTML file in a web browser!
+*/
+
 // This is a simple JavaScript file to add interactivity to the Water Hope landing page
 
 document.addEventListener('DOMContentLoaded', function() {
