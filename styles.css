@@ -433,7 +433,7 @@ blockquote {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     text-align: center;
     margin: 0 auto;
-    color: var(--light);
+    color: var(--dark);
     overflow: hidden; /* Ensure images stay within the box */
 }
 .involvement-img {
