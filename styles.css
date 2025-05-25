@@ -52,6 +52,8 @@ h1, h2, h3 {
     top: 0;
     left: 0;
     z-index: 10;
+    border-bottom: 3px solid #0099cc; /* Blue border for header */
+    box-sizing: border-box;
 }
 .logo h1 {
     color: var(--primary-blue);
@@ -86,6 +88,10 @@ h1, h2, h3 {
     text-align: center;
     margin-top: 70px;
     position: relative;
+    border: 3px solid #FFC907; /* Yellow border for hero */
+    padding: 2rem 0; /* Add vertical space inside */
+    margin-bottom: 2rem;
+    box-sizing: border-box;
 }
 .hero-img {
     width: 100%;
@@ -130,6 +136,12 @@ h1, h2, h3 {
 }
 
 /* Why Water Section */
+#why-water {
+    border: 3px solid #4FCB53; /* Green border for why water */
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
 #why-water ul {
     margin: 1rem 0;
     padding-left: 1.2rem;
@@ -139,6 +151,12 @@ h1, h2, h3 {
 }
 
 /* Story Section */
+#our-story {
+    border: 3px solid #0099cc; /* Blue border for story */
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
 .story-img {
     width: 100%;
     max-width: 400px;
@@ -162,6 +180,10 @@ h1, h2, h3 {
     padding: 2rem 0;
     margin-top: 2rem;
     border-radius: 10px;
+    border: 3px solid #F16061; /* Pink border for CTA */
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
 }
 .cta-img {
     width: 100%;
@@ -217,6 +239,8 @@ section {
     padding: 1rem 0;
     margin-top: 2rem;
     border-radius: 0 0 10px 10px;
+    border-top: 3px solid #222; /* Black border for footer */
+    box-sizing: border-box;
 }
 
 /* Responsive Design */
