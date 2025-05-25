@@ -3,10 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
+    <title>Water Hope | Clean Water for Everyone</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Import Poppins and Open Sans fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Add your HTML here -->
+    <!-- Header and Navigation Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Water Hope</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#why-water">Why Water?</a></li>
+                    <li><a href="#our-story">Our Story</a></li>
+                    <li><a href="#impact">Our Impact</a></li>
+                    <li><a href="#donate" class="donate-btn">Donate Now</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="main-title">Because Clean Water<br>Changes Everything</h1>
+                <p class="hero-description">703 million people live without clean water. Your donation today ensures them a better future filled with health and dignity.</p>
+                <p class="hero-guarantee">100% of your donation goes directly to water projects</p>
+                <a href="#donate" class="cta-button primary">Start Making Change</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Water Section -->
+    <section id="why-water" class="why-water-section">
+        <div class="container">
+            <h2 class="section-title">Why Clean Water<br>Changes Everything</h2>
+            <div class="impact-categories">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health</h3>
+                    <p>Clean water reduces waterborne diseases by 80% and protects children from early mortality.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <p>When clean water is available, children can go to school instead of spending hours fetching water.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3>Women Empowerment</h3>
+                    <p>Women and girls spend hours collecting water. Providing water gives them time for education and work.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Economic Growth</h3>
+                    <p>Every dollar invested in water and sanitation projects returns $4 to the local economy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="our-story" class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2 class="section-title">A Life Transformed by Clean Water</h2>
+                    <p class="story-paragraph">Fatima used to spend 5 hours daily collecting water for her family, which deprived her of education and childhood. The water she collected was contaminated and repeatedly made her younger brother sick.</p>
+                    <p class="story-paragraph">After a well was built in her village, Fatima's life changed completely. She now attends school regularly and dreams of becoming a doctor to help her community.</p>
+                    <blockquote class="story-quote">"Water is life... Now I have time to study and dream of a better future. My brother no longer gets sick from contaminated water. We can grow crops and earn income, and I return from school to see my family safe."</blockquote>
+                    <p class="story-author">- Fatima, 12 years old</p>
+                </div>
+                <div class="story-image">
+                    <img src="images/story-image.jpg" alt="Woman using a clean water pump in her village">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="donate-section">
+        <div class="container">
+            <h2 class="section-title">Be the Reason Behind the Next Story</h2>
+            <p class="donate-description">Every dollar invested in water and sanitation projects returns $4 to the local economy. Your monthly donation of $40 provides clean water to 12 people annually.</p>
+            
+            <div class="donation-options">
+                <div class="donation-type">
+                    <button class="donation-type-btn active" data-type="monthly">Monthly Donation</button>
+                    <button class="donation-type-btn" data-type="once">One-time Donation</button>
+                </div>
+                
+                <div class="donation-amounts">
+                    <button class="donation-amount-btn" data-amount="10">$10</button>
+                    <button class="donation-amount-btn active" data-amount="40">$40</button>
+                    <button class="donation-amount-btn" data-amount="100">$100</button>
+                    <button class="donation-amount-btn" data-amount="custom">Other Amount</button>
+                </div>
+                
+                <a href="#" class="cta-button primary large">Bring Hope to a Family</a>
+            </div>
+            
+            <div class="donation-impact-wrapper">
+                <div class="impact-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <p class="donation-impact">Your monthly donation of $40 will provide clean water to 12 people every year</p>
+                <p class="donation-guarantee"><strong>100% of your donation</strong> goes directly to water projects</p>
+            </div>
+            
+            <div class="trust-indicators">
+                <p class="secure-payment"><i class="fas fa-lock"></i> Secure and encrypted payment process</p>
+                <p class="transparency">We are committed to complete transparency in the use of donations</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Water Hope</h2>
+                    <p>A non-profit organization dedicated to providing clean water for everyone</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#why-water">Why Water?</a></li>
+                        <li><a href="#our-story">Our Story</a></li>
+                        <li><a href="#impact">Our Impact</a></li>
+                        <li><a href="#donate">Donate Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> info@waterhope.org</p>
+                    <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Water Hope. All rights reserved.</p>
+                <p>100% of public donations go directly to water projects.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
