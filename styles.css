@@ -88,9 +88,7 @@ h1, h2, h3 {
     text-align: center;
     margin-top: 70px;
     position: relative;
-    border: 3px solid #FFC907; /* Yellow border for hero */
-    padding: 2rem 0; /* Add vertical space inside */
-    margin-bottom: 2rem;
+    padding: 2rem 0;
     box-sizing: border-box;
 }
 .hero-img {
@@ -100,39 +98,67 @@ h1, h2, h3 {
     border-radius: 10px;
     margin-bottom: 1.5rem;
 }
-
-/* Hero subheading for extra context */
-.hero-subheading {
-    font-size: 1.2rem;
+.hero-content {
+    background: rgba(255, 255, 255, 0.92);
     color: var(--primary-blue);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
+    padding: 2rem;
+    border-radius: 14px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-/* Make the main headline very large and bold */
 .main-title {
-    font-size: 3rem; /* Large for desktop */
+    font-size: 2.5rem; /* Large for desktop */
     font-weight: 900;
     color: var(--primary-blue);
     margin-bottom: 1.2rem;
     line-height: 1.1;
     letter-spacing: -1px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Subtle shadow for contrast */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* Subtle shadow for contrast */
 }
-
-/* Add more whitespace around hero content */
-.hero-content {
-    background: rgba(255,255,255,0.92);
-    color: var(--primary-blue);
-    padding: 3rem 2rem;
-    border-radius: 14px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.hero-subheading {
+    font-size: 1.2rem;
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+.cta-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+.cta-button {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s, transform 0.2s;
+}
+.cta-button.primary {
+    background: var(--accent-yellow);
+    color: var(--dark);
+}
+.cta-button.primary:hover {
+    background: var(--primary-blue);
+    color: var(--light);
+    transform: translateY(-3px);
+}
+.cta-button.secondary {
+    background: var(--primary-blue);
+    color: var(--light);
+}
+.cta-button.secondary:hover {
+    background: var(--accent-yellow);
+    color: var(--dark);
+    transform: translateY(-3px);
 }
 
 /* Why Water Section */
@@ -313,5 +339,23 @@ section {
     section {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+    }
+}
+
+/* Responsive Design for Hero Section */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 1.8rem; /* Smaller headline for mobile */
+    }
+    .hero-subheading {
+        font-size: 1rem;
+    }
+    .cta-buttons {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        gap: 0.5rem;
+    }
+    .cta-button {
+        width: 100%; /* Full-width buttons on mobile */
+        text-align: center;
     }
 }
