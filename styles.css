@@ -62,12 +62,13 @@ h1, h2, h3 {
 
 /* Center navigation links */
 .main-nav ul {
-    list-style: none;
     display: flex;
-    justify-content: center; /* Center the links */
-    gap: 2rem; /* Add space between links */
-    padding: 0;
+    gap: 2rem;
+    list-style: none;
     margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-end;
 }
 .main-nav a {
     color: var(--dark);
@@ -240,6 +241,12 @@ h1, h2, h3 {
     width: 50px;
     height: 50px;
     margin-bottom: 0.5rem;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+.icon-box:hover img {
+    /* Slight shake and glow */
+    transform: rotate(-7deg) scale(1.08);
+    box-shadow: 0 0 16px 0 #0099cc44;
 }
 .icon-box p {
     font-size: 1rem;
