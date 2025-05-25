@@ -1,69 +1,57 @@
 /* 
-Water Hope - Simple CSS for Charity Landing Page
-
-Main Colors:
-- Yellow (#FFC907) and Blue (#2E9DF7) for a bright, friendly look.
-
-Fonts:
-- Proxima Nova and Avenir for clean, modern text.
+charity: water - Simple, Brand-Aligned CSS
+Colors: Blue (#0099cc), Yellow (#FFC907), White, Black
+Fonts: Montserrat (headings), Open Sans (body)
 */
 
-/* Reset default browser styles */
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Main color and font variables */
+/* Brand colors and fonts */
 :root {
-    --primary-color: #FFC907;   /* Yellow */
-    --primary-blue: #2E9DF7;    /* Blue */
-    --dark-color: #333;
-    --light-color: #fff;
-    --main-font: 'Proxima Nova', 'Avenir', sans-serif;
+    --primary-blue: #0099cc;
+    --accent-yellow: #FFC907;
+    --dark: #222;
+    --light: #fff;
+    --main-font: 'Open Sans', Arial, sans-serif;
+    --heading-font: 'Montserrat', Arial, sans-serif;
 }
 
-/* Basic body styles */
+/* Body and container */
 body {
     font-family: var(--main-font);
-    color: var(--dark-color);
-    background: var(--light-color);
+    color: var(--dark);
+    background: var(--light);
     line-height: 1.6;
 }
-
-/* Container for page content */
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 /* Headings */
 h1, h2, h3 {
-    font-family: var(--main-font);
-    font-weight: bold;
+    font-family: var(--heading-font);
+    font-weight: 700;
     margin-bottom: 1rem;
-}
-
-/* Simple link styles */
-a {
     color: var(--primary-blue);
-    text-decoration: none;
-}
-a:hover {
-    color: var(--primary-color);
 }
 
-/* Header styles */
+/* Header */
 .main-header {
-    background: var(--light-color);
+    background: var(--light);
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 10;
 }
 .logo h1 {
     color: var(--primary-blue);
@@ -75,73 +63,123 @@ a:hover {
     gap: 1.5rem;
 }
 .main-nav a {
-    color: var(--dark-color);
+    color: var(--dark);
     font-weight: bold;
+    text-decoration: none;
 }
 .donate-btn {
-    background: var(--primary-color);
-    color: var(--dark-color) !important;
+    background: var(--accent-yellow);
+    color: var(--dark) !important;
     padding: 0.5rem 1rem;
     border-radius: 30px;
 }
 
-/* Hero section with background image */
+/* Hero Section */
 .hero-section {
-    /* To change the background, replace 'hero-bg.jpg' in the images folder */
-    background-image: url('images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: var(--light-color);
+    background: var(--primary-blue);
+    color: var(--light);
     min-height: 400px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-top: 70px;
+    position: relative;
 }
-.hero-overlay {
-    /* Optional: add a dark overlay if needed */
-    display: none;
+.hero-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
 }
 .hero-content {
-    background: rgba(46,157,247,0.7);
+    background: rgba(255,255,255,0.85);
+    color: var(--primary-blue);
     padding: 2rem;
     border-radius: 10px;
+    display: inline-block;
 }
 .main-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
+    color: var(--primary-blue);
 }
 .hero-description {
     font-size: 1.1rem;
     margin-bottom: 1rem;
+    color: var(--dark);
 }
 
-/* Simple button style */
+/* Why Water Section */
+#why-water ul {
+    margin: 1rem 0;
+    padding-left: 1.2rem;
+}
+#why-water li {
+    margin-bottom: 0.5rem;
+}
+
+/* Story Section */
+.story-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#our-story p {
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+/* CTA Section */
+.cta-section {
+    background: var(--accent-yellow);
+    color: var(--dark);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+.cta-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
 .cta-button {
-    background: var(--primary-color);
-    color: var(--dark-color);
+    background: var(--primary-blue);
+    color: var(--light);
     padding: 0.8rem 2rem;
     border-radius: 30px;
     font-weight: bold;
     border: none;
     cursor: pointer;
     margin-top: 1rem;
+    text-decoration: none;
+    display: inline-block;
 }
 .cta-button:hover {
+    background: var(--dark);
+    color: var(--accent-yellow);
+}
+
+/* Footer */
+.main-footer {
     background: var(--primary-blue);
-    color: var(--light-color);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-radius: 0 0 10px 10px;
 }
 
-/* Story section image */
-.story-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-/* Responsive design for mobile */
+/* Responsive Design */
 @media (max-width: 768px) {
     .main-nav ul {
         flex-direction: column;
@@ -151,6 +189,9 @@ a:hover {
         padding: 1rem;
     }
     .main-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+    .container {
+        width: 98%;
     }
 }
