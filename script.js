@@ -139,4 +139,44 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     setInterval(updateCounter, 3000); // Update the counter every 3 seconds
+
+    // Pulse animation for the hero donate button every 3 seconds
+    // Select the hero donate button (first .cta-button.primary in hero section)
+    const heroDonateBtn = document.querySelector('.hero-section .cta-button.primary');
+    if (heroDonateBtn) {
+        setInterval(function() {
+            heroDonateBtn.classList.add('pulse');
+            setTimeout(function() {
+                heroDonateBtn.classList.remove('pulse');
+            }, 700); // Match animation duration
+        }, 3000);
+    }
+    
+    // Impact Calculator: احسب تأثيرك
+    // Get the input, button, and result elements
+    const donationInput = document.getElementById('donation-amount');
+    const calcBtn = document.getElementById('calc-impact-btn');
+    const impactResult = document.getElementById('impact-result');
+
+    // Function to calculate and show the impact
+    function showImpact() {
+        // Get the value from the input (how many dollars)
+        var dollars = parseInt(donationInput.value, 10);
+        // If the value is not a number or less than 1, show a message
+        if (isNaN(dollars) || dollars < 1) {
+            impactResult.textContent = 'الرجاء إدخال رقم أكبر من 0';
+            return;
+        }
+        // Each $1 changes 1 life
+        impactResult.textContent = 'ستغير حياة ' + dollars + ' شخص' + (dollars > 1 ? 'اً' : '') + ' بالماء النظيف!';
+    }
+
+    // When the user clicks the button, show the impact
+    if (calcBtn) {
+        calcBtn.addEventListener('click', showImpact);
+    }
+    // Also update when the user changes the input
+    if (donationInput) {
+        donationInput.addEventListener('input', showImpact);
+    }
 });

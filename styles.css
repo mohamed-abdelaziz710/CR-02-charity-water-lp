@@ -177,6 +177,23 @@ h1, h2, h3 {
     transform: translateY(-3px);
 }
 
+/* Pulse animation for the hero donate button */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 201, 7, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 16px rgba(255, 201, 7, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 201, 7, 0);
+    }
+}
+
+.cta-button.primary.pulse {
+    animation: pulse-glow 0.7s;
+}
+
 /* Why Water Section */
 #why-water {
     border: 3px solid #4FCB53; /* Green border for why water */
