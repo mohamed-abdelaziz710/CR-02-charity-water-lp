@@ -434,14 +434,24 @@ blockquote {
     text-align: center;
     margin: 0 auto;
     color: var(--light);
+    background: var(--light);
+}
+.involvement-img {
+    width: 100%; /* Make the image responsive */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+    margin-bottom: 1rem; /* Add spacing below the image */
 }
 .involvement-box h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: var(--dark);
 }
 .involvement-box p {
     font-size: 1rem;
     margin-bottom: 1.5rem;
+    color: var(--dark);
 }
 .involvement-box a {
     text-decoration: none;
@@ -498,6 +508,9 @@ blockquote {
     }
     .involvement-box {
         max-width: 100%; /* Full width on smaller screens */
+    }
+    .involvement-img {
+        max-width: 100%; /* Ensure images fit within the container */
     }
 }
 
