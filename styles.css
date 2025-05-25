@@ -93,7 +93,8 @@ h1, h2, h3 {
 
 /* Hero Section */
 .hero-section {
-    background: var(--primary-blue);
+    position: relative;
+    background: var(--primary-blue); /* Fallback background color */
     color: var(--light);
     min-height: 400px;
     display: flex;
@@ -102,19 +103,27 @@ h1, h2, h3 {
     justify-content: center;
     text-align: center;
     margin-top: 70px;
-    position: relative;
     padding: 2rem 0;
     box-sizing: border-box;
+    overflow: hidden; /* Ensure content stays within bounds */
+}
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the image behind the content */
+    overflow: hidden;
 }
 .hero-img {
     width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire section */
+    object-position: center; /* Center the image */
 }
 .hero-content {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.92); /* Semi-transparent background for readability */
     color: var(--primary-blue);
     padding: 2rem;
     border-radius: 14px;
@@ -409,6 +418,97 @@ blockquote {
     }
 }
 
+/* Get Involved Section */
+.get-involved-section {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--light);
+    border-top: 3px solid var(--primary-blue);
+    border-bottom: 3px solid var(--primary-blue);
+}
+.involvement-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+.involvement-box {
+    flex: 1;
+    max-width: 300px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin: 0 auto;
+    color: var(--light);
+}
+.involvement-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.involvement-box p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+.involvement-box a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    display: inline-block;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Colors for each block */
+.involvement-box.donate {
+    background: var(--accent-yellow);
+}
+.involvement-box.donate a {
+    background: var(--primary-blue);
+    color: var(--light);
+}
+.involvement-box.donate a:hover {
+    background: var(--dark);
+    transform: translateY(-3px);
+}
+
+.involvement-box.fundraise {
+    background: var(--primary-blue);
+}
+.involvement-box.fundraise a {
+    background: var(--accent-yellow);
+    color: var(--dark);
+}
+.involvement-box.fundraise a:hover {
+    background: var(--dark);
+    transform: translateY(-3px);
+}
+
+.involvement-box.partner {
+    background: var(--dark);
+}
+.involvement-box.partner a {
+    background: var(--accent-yellow);
+    color: var(--dark);
+}
+.involvement-box.partner a:hover {
+    background: var(--primary-blue);
+    color: var(--light);
+    transform: translateY(-3px);
+}
+
+/* Responsive Design for Get Involved Section */
+@media (max-width: 768px) {
+    .involvement-container {
+        flex-direction: column; /* Stack blocks vertically on mobile */
+        gap: 1rem;
+    }
+    .involvement-box {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+
 /* ===========================
    Responsive Design for Tablets
    ===========================
@@ -472,8 +572,11 @@ blockquote {
 
 /* Responsive Design for Hero Section */
 @media (max-width: 768px) {
+    .hero-content {
+        padding: 1.5rem;
+    }
     .main-title {
-        font-size: 1.8rem; /* Smaller headline for mobile */
+        font-size: 1.8rem; /* Adjust headline size for smaller screens */
     }
     .hero-subheading {
         font-size: 1rem;
@@ -487,11 +590,11 @@ blockquote {
         text-align: center;
     }
 }
-
-/* Responsive Design for Why Water Section */
-@media (max-width: 768px) {
-    .why-water-icons {
-        flex-direction: column; /* Stack icons vertically on mobile */
-        gap: 1rem;
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.5rem; /* Further adjust headline size for very small screens */
+    }
+    .hero-subheading {
+        font-size: 0.9rem;
     }
 }
