@@ -19,8 +19,8 @@
             <div class="logo">
                 <!-- Logo links to the homepage for easy navigation -->
                 <a href="#hero" class="logo-link">
-                    <!-- Logo image with descriptive alt text for accessibility -->
-                    <img src="img/cw_logo.png" alt="charity: water logo" class="logo-image">
+                    <!-- Try to load local logo image first. If it fails, show external logo as fallback. -->
+                    <img src="img/cw_logo.png" alt="charity: water logo" class="logo-image" onerror="this.onerror=null;this.src='https://assets.website-files.com/5d0c7060be4c75a8d9d9d13c/5d0c7060be4c75e8f5d9d1c3_charity-water-logo.svg'">
                     <span class="logo-text">charity: water</span>
                 </a>
             </div>
