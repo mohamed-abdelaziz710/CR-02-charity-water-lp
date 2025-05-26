@@ -1,93 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- This section contains important information for the browser -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>charity: water | Bring Clean Water to Communities in Need</title>
-    <meta name="description" content="Join charity: water in the mission to provide clean, safe drinking water to people in need. Donate, fundraise, or partner with us to make a lasting impact. Together, we can change lives.">
-    <!-- Google Fonts for better text appearance -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,600&display=swap" rel="stylesheet">
-    <!-- Link to the CSS file for styles -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header: Contains the logo and navigation menu -->
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <h1>charity: water</h1>
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-bg">
+        <img src="img/hero.jpg" 
+             alt="A child smiling with clean water" 
+             class="hero-img" 
+             loading="lazy"
+             onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600?text=Missing+Image+hero.jpg'; console.warn('Missing: img/hero.jpg')">
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="main-title">Clean Water Changes Lives. Be the Reason.</h1>
+            <p class="hero-subheading">Every $1 brings clean water to someone in need.</p>
+            <div class="cta-buttons">
+                <a href="#donate" class="cta-button primary">Change a Life</a>
+                <a href="#learn-more" class="cta-button secondary">Learn More</a>
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#why-water">Why Water?</a></li>
-                    <li><a href="#our-story">Our Story</a></li>
-                    <li><a href="#cta" class="donate-btn">Change a Life</a></li>
-                </ul>
-            </nav>
         </div>
-    </header>
+    </div>
+</section>
 
-    <!-- Hero Section: Main message and call to action -->
-    <section class="hero-section">
-        <div class="container">
-            <!-- Background video for visual impact -->
-            <video autoplay loop muted playsinline class="hero-bg-video">
-                <source src="https://videos.pexels.com/video-files/2062579/2062579-hd_1920_1080_25fps.mp4" type="video/mp4">
-                <!-- If the video doesn't load, nothing will show -->
-            </video>
-            <div class="hero-content">
-                <!-- Main title for the page -->
-                <h1 class="main-title">Clean Water Changes Lives. Be the Reason.</h1>
-                <!-- Short description under the title -->
-                <p class="hero-subheading">Every $1 brings clean water to someone in need.</p>
-                <!-- Impact counter shows how many lives have been changed -->
-                <div id="impact-counter" class="impact-counter" style="font-size:1.3rem; color:#FFC907; font-weight:bold; margin-bottom:1rem;">13,022 Lives Impacted</div>
-                <!-- Buttons for main actions -->
-                <div class="cta-buttons">
-                    <a href="#donate" class="cta-button primary">Change a Life</a>
-                    <a href="#learn-more" class="cta-button secondary">Learn More</a>
-                </div>
-                <!-- Mini Impact Calculator: lets users see their impact -->
-                <div class="impact-calc" style="margin-top:2rem; background:#f6f7fa; padding:1.2rem 1rem; border-radius:1rem; max-width:350px;">
-                    <!-- Label for the input field -->
-                    <label for="donation-amount" style="font-weight:bold; display:block; margin-bottom:0.5rem;">
-                        احسب تأثيرك: كم دولار تريد أن تتبرع؟
-                        <!-- This means: "Calculate your impact: How many dollars do you want to donate?" -->
-                    </label>
-                    <!-- Input for user to enter donation amount -->
-                    <input type="number" id="donation-amount" min="1" value="10" style="padding:0.5rem; border-radius:0.5rem; border:1px solid #ccc; width:100px;">
-                    <!-- Button to calculate impact -->
-                    <button id="calc-impact-btn" class="cta-button secondary" style="margin-left:0.5rem;">احسب</button>
-                    <!-- Result will be shown here -->
-                    <div id="impact-result" style="margin-top:0.7rem; font-size:1.1rem; color:#0099cc;"></div>
-                    <!-- Simple explanation for students -->
-                    <div style="font-size:0.95rem; color:#666; margin-top:0.3rem;">
-                        <!-- This means: "Every $1 changes one person's life with clean water." -->
-                        كل دولار واحد يغير حياة شخص واحد بالماء النظيف.
-                    </div>
-                </div>
-                <!-- End of impact calculator -->
-                <!-- Add a simple script for the impact calculator -->
-                <script>
-                  // This script calculates how many people you can help with your donation
-                  // 1 dollar helps 1 person
-                  document.getElementById('calc-impact-btn').onclick = function() {
-                    // Get the value from the input
-                    var amount = document.getElementById('donation-amount').value;
-                    // Make sure the amount is at least 1
-                    if(amount < 1) amount = 1;
-                    // Calculate the impact (1 dollar = 1 person)
-                    var people = amount;
-                    // Show the result to the user
-                    document.getElementById('impact-result').innerText = "You can help " + people + " people get clean water!";
-                  }
-                </script>
-            </div>
-            <!-- Hero Image for visual impact -->
-            <!-- Removed static hero image, video is now the background -->
-        </div>
-    </section>
+<!-- One Stat -->
+<div class="stat-box">
+    <div class="stat-icon">
+        <img src="img/icon-lives.png" 
+             alt="Lives Changed Icon"
+             onerror="this.onerror=null; this.src='https://via.placeholder.com/100x100?text=Missing+icon-lives.png'; console.warn('Missing: icon-lives.png')">
+    </div>
+    <p class="stat-number">13,000+</p>
+    <p class="stat-description">Lives transformed by clean water.</p>
+</div>
+
+<!-- One Testimonial -->
+<div class="testimonial-box">
+    <img src="img/testimonial1.jpg" 
+         alt="Beneficiary smiling" 
+         class="testimonial-img" 
+         loading="lazy"
+         onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Missing+testimonial1.jpg'; console.warn('Missing: testimonial1.jpg')">
+    <blockquote>
+        "Thanks to clean water, I can now go to school every day and dream of becoming a teacher."
+    </blockquote>
+    <p class="testimonial-author">- Fatima, 12 years old</p>
+</div>
+
 
     <!-- Progress Bar Section -->
     <section class="progress-section" style="background:#f6f7fa; padding:2rem 0;">

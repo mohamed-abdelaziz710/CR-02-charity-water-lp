@@ -34,6 +34,30 @@ body {
     margin: 0 auto;
 }
 
+/* Flexbox for nav header */
+.container.nav-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logo img {
+    height: 38px;
+    margin-right: 10px;
+}
+.logo span {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: #0099cc;
+    letter-spacing: 1px;
+}
+
 /* Headings */
 h1, h2, h3 {
     font-family: var(--heading-font);
