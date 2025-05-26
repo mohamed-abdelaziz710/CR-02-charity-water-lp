@@ -434,7 +434,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Parallax effect for hero section
-    const heroSection = document.querySelector('.hero-section');
     const heroContent = document.querySelector('.hero-content');
     
     function parallaxEffect() {
