@@ -719,12 +719,54 @@ ul, ol {
 }
 
 @media (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 95%;
+        padding: 0 0.5rem;
+    }
+    
+    .section-padding {
+        padding: 2rem 0;
+    }
+    
     .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
         font-size: 2rem;
     }
     
-    .counter-number {
-        font-size: 2rem;
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .donate-btn {
+        padding: 0.4rem 1rem;
+    }
+}
+
+/* Extra small screen optimizations */
+@media (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .main-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
     }
 }
 
@@ -2274,6 +2316,26 @@ ul, ol {
 
     .donate-btn {
         padding: 0.4rem 1rem;
+    }
+}
+
+/* Extra small screen optimizations */
+@media (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .main-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
     }
 }
 
