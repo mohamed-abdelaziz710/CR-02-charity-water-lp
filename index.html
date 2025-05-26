@@ -48,15 +48,13 @@
                     <a href="#donate" class="cta-button primary">Change a Life</a>
                     <a href="#learn-more" class="cta-button secondary">Learn More</a>
                 </div>
-                <!-- Live counter for people impacted -->
-                <div class="live-counter">
-                    <p>People Impacted:</p>
-                    <span id="counter">13,000</span>
-                </div>
                 <!-- Mini Impact Calculator: lets users see their impact -->
                 <div class="impact-calc" style="margin-top:2rem; background:#f6f7fa; padding:1.2rem 1rem; border-radius:1rem; max-width:350px;">
                     <!-- Label for the input field -->
-                    <label for="donation-amount" style="font-weight:bold; display:block; margin-bottom:0.5rem;">احسب تأثيرك: كم دولار تريد أن تتبرع؟</label>
+                    <label for="donation-amount" style="font-weight:bold; display:block; margin-bottom:0.5rem;">
+                        احسب تأثيرك: كم دولار تريد أن تتبرع؟
+                        <!-- This means: "Calculate your impact: How many dollars do you want to donate?" -->
+                    </label>
                     <!-- Input for user to enter donation amount -->
                     <input type="number" id="donation-amount" min="1" value="10" style="padding:0.5rem; border-radius:0.5rem; border:1px solid #ccc; width:100px;">
                     <!-- Button to calculate impact -->
@@ -64,9 +62,27 @@
                     <!-- Result will be shown here -->
                     <div id="impact-result" style="margin-top:0.7rem; font-size:1.1rem; color:#0099cc;"></div>
                     <!-- Simple explanation for students -->
-                    <div style="font-size:0.95rem; color:#666; margin-top:0.3rem;">كل دولار واحد يغير حياة شخص واحد بالماء النظيف.</div>
+                    <div style="font-size:0.95rem; color:#666; margin-top:0.3rem;">
+                        <!-- This means: "Every $1 changes one person's life with clean water." -->
+                        كل دولار واحد يغير حياة شخص واحد بالماء النظيف.
+                    </div>
                 </div>
                 <!-- End of impact calculator -->
+                <!-- Add a simple script for the impact calculator -->
+                <script>
+                  // This script calculates how many people you can help with your donation
+                  // 1 dollar helps 1 person
+                  document.getElementById('calc-impact-btn').onclick = function() {
+                    // Get the value from the input
+                    var amount = document.getElementById('donation-amount').value;
+                    // Make sure the amount is at least 1
+                    if(amount < 1) amount = 1;
+                    // Calculate the impact (1 dollar = 1 person)
+                    var people = amount;
+                    // Show the result to the user
+                    document.getElementById('impact-result').innerText = "You can help " + people + " people get clean water!";
+                  }
+                </script>
             </div>
             <!-- Hero Image for visual impact -->
             <!-- Removed static hero image, video is now the background -->
@@ -198,7 +214,9 @@
     <section id="get-involved" class="get-involved-section">
         <div class="container">
             <h2>Get Involved</h2>
-            <div class="involvement-container">
+            <!-- We use a simple column layout for beginners -->
+            <div class="involvement-list">
+                <!-- Each box is stacked vertically -->
                 <div class="involvement-box donate">
                     <img src="img/donate.jpg" alt="Donate to change lives" class="involvement-img">
                     <h3>Donate</h3>

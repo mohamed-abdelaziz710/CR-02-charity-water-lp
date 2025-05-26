@@ -540,6 +540,32 @@ blockquote {
     transform: translateY(-3px);
 }
 
+/* Simple vertical stack for involvement section */
+.involvement-list {
+    /* Stack children vertically */
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.involvement-box {
+    /* Add space between boxes */
+    background: #f6f7fa;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px #0099cc11;
+}
+
+.involvement-img {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
+}
+
 /* Responsive Design for Get Involved Section */
 @media (max-width: 768px) {
     .involvement-container {
