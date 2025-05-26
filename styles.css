@@ -15,6 +15,45 @@ Fonts:
 - Avenir (Nunito Sans as web alternative)
 */
 
+/* CSS Variables */
+:root {
+    /* Colors */
+    --primary-yellow: #FFC907;
+    --primary-blue: #2E9DF7;
+    --light-blue: #8BD1CB;
+    --green: #4FCB53;
+    --orange: #FF902A;
+    --red: #F5402C;
+    --dark-green: #159A48;
+    --pink: #F16061;
+    
+    /* Neutral colors */
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --medium-gray: #999999;
+    --dark-gray: #333333;
+    
+    /* Fonts */
+    --heading-font: 'Montserrat', sans-serif; /* Proxima Nova alternative */
+    --body-font: 'Nunito Sans', sans-serif; /* Avenir alternative */
+    
+    /* Border radius */
+    --border-radius-small: 4px;
+    --border-radius-medium: 8px;
+    --border-radius-large: 12px;
+    --border-radius-xl: 24px;
+    
+    /* Shadows */
+    --shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-large: 0 10px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-medium: 0.5s ease;
+    --transition-slow: 0.8s ease;
+}
+
 /* Reset and base styles */
 *, *::before, *::after {
     margin: 0;
@@ -2236,5 +2275,5 @@ ul, ol {
     .donate-btn {
         padding: 0.4rem 1rem;
     }
-} /* Add this closing brace for the media query */
+}
 
