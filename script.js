@@ -1,10 +1,10 @@
 /*
 =====================================
-WATER HOPE CHARITY LANDING PAGE
-CUSTOMIZATION GUIDE FOR STUDENTS
+CHARITY: WATER LANDING PAGE
+INTERACTIVE FEATURES
 =====================================
 
-This JavaScript file controls the interactive features of your charity landing page.
+This JavaScript file controls the interactive features of your charity: water landing page.
 Here's how you can customize different parts:
 
 1. DONATION AMOUNTS:
@@ -32,7 +32,7 @@ Here's how you can customize different parts:
 Remember: Always test your changes by opening the HTML file in a web browser!
 */
 
-// This is a simple JavaScript file to add interactivity to the Water Hope landing page
+// This is a simple JavaScript file to add interactivity to the charity: water landing page
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
@@ -135,7 +135,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateCounter() {
         currentCount += Math.floor(Math.random() * 5) + 1; // Increment by a random number between 1 and 5
-        counterElement.textContent = currentCount.toLocaleString(); // Update the counter with a formatted number
+        if (counterElement) {
+            counterElement.textContent = currentCount.toLocaleString(); // Update the counter with a formatted number
+        }
     }
 
     setInterval(updateCounter, 3000); // Update the counter every 3 seconds
@@ -152,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
     
-    // Impact Calculator: احسب تأثيرك
+    // Impact Calculator
     // Get the input, button, and result elements
     const donationInput = document.getElementById('donation-amount');
     const calcBtn = document.getElementById('calc-impact-btn');
@@ -164,11 +166,11 @@ document.addEventListener('DOMContentLoaded', function() {
         var dollars = parseInt(donationInput.value, 10);
         // If the value is not a number or less than 1, show a message
         if (isNaN(dollars) || dollars < 1) {
-            impactResult.textContent = 'الرجاء إدخال رقم أكبر من 0';
+            impactResult.textContent = 'Please enter a number greater than 0';
             return;
         }
         // Each $1 changes 1 life
-        impactResult.textContent = 'ستغير حياة ' + dollars + ' شخص' + (dollars > 1 ? 'اً' : '') + ' بالماء النظيف!';
+        impactResult.textContent = 'Your donation will provide clean water to ' + dollars + ' people!';
     }
 
     // When the user clicks the button, show the impact
@@ -192,19 +194,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 newsletterMsg.style.color = '#F5402C';
             } else {
                 newsletterMsg.textContent = 'Thank you for subscribing!';
-                newsletterMsg.style.color = '#0099cc';
+                newsletterMsg.style.color = '#2E9DF7';
                 newsletterForm.reset();
             }
         });
     }
     
-    // Impact Counter: عداد المستفيدين التفاعلي
+    // Impact Counter
     let counter = 13022;
     setInterval(()=>{
       counter++;
       const impactCounter = document.getElementById('impact-counter');
       if (impactCounter) {
-        impactCounter.innerText = counter + " Lives Impacted";
+        impactCounter.innerText = counter.toLocaleString();
       }
-    }, 4000); // كل 4 ثواني يزيد العداد
+    }, 4000); // Update every 4 seconds
 });

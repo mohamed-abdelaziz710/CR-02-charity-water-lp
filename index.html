@@ -1,262 +1,230 @@
-<!-- ================= HERO SECTION ================= -->
-<!-- The hero section grabs attention with a background image, headline, and call-to-action buttons. -->
-<section class="hero-section" style="background: url('ChatGPT Image May 26, 2025, 03_10_20 AM.png') center center/cover no-repeat;">
-    <!-- Optional: Keep the video for fallback or remove if only image is needed -->
-    <!-- <video autoplay loop muted playsinline class="hero-bg-video">
-        <source src="https://videos.pexels.com/video-files/2062579/2062579-hd_1920_1080_25fps.mp4" type="video/mp4">
-    </video> -->
-    <div class="container">
-        <div class="hero-content">
-            <!-- Main headline with animation -->
-            <h1 class="main-title">Clean Water Changes Lives. Be the Reason.</h1>
-            <!-- Subheading for extra info -->
-            <p class="hero-subheading">Every $1 brings clean water to someone in need.</p>
-            <!-- Call-to-action buttons -->
-            <div class="cta-buttons">
-                <a href="#donate" class="cta-button primary">Change a Life</a>
-                <a href="#learn-more" class="cta-button secondary">Learn More</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charity: water | Clean Water for Everyone</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Import fonts that are similar to Proxima Nova and Avenir -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header and Navigation Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>charity: water</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#why-water">Why Water?</a></li>
+                    <li><a href="#our-story">Our Story</a></li>
+                    <li><a href="#impact">Our Impact</a></li>
+                    <li><a href="#donate" class="donate-btn">Donate</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
-    </div>
-</section>
-<!-- ================= END HERO SECTION ================= -->
+    </header>
 
-<!-- One Stat (example, can be moved to impact section) -->
-<!-- Shows a key number to build trust and excitement -->
-<div class="stat-box">
-    <div class="stat-icon">
-        <img src="img/icon-lives.png" 
-             alt="Lives Changed Icon"
-             onerror="this.onerror=null; this.src='https://via.placeholder.com/100x100?text=Missing+icon-lives.png'; console.warn('Missing: icon-lives.png')">
-    </div>
-    <p class="stat-number">13,000+</p>
-    <p class="stat-description">Lives transformed by clean water.</p>
-</div>
-
-<!-- One Testimonial (example, can be moved to testimonials section) -->
-<!-- Shows a real story to connect emotionally -->
-<div class="testimonial-box">
-    <img src="img/testimonial1.jpg" 
-         alt="Beneficiary smiling" 
-         class="testimonial-img" 
-         loading="lazy"
-         onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Missing+testimonial1.jpg'; console.warn('Missing: testimonial1.jpg')">
-    <blockquote>
-        "Thanks to clean water, I can now go to school every day and dream of becoming a teacher."
-    </blockquote>
-    <p class="testimonial-author">- Fatima, 12 years old</p>
-</div>
-
-
-    <!-- Progress Bar Section -->
-    <section class="progress-section" style="background:#f6f7fa; padding:2rem 0;">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="container">
-            <h2 style="text-align:center; color:#0099cc;">Help Us Reach Our Goal!</h2>
-            <div style="max-width:400px; margin:1.5rem auto;">
-                <div style="background:#e0e0e0; border-radius:1rem; overflow:hidden; height:28px;">
-                    <div id="progress-bar" style="background:#FFC907; width:67%; height:100%; transition:width 1s;"></div>
+            <div class="hero-content">
+                <h1 class="main-title">Clean water changes everything</h1>
+                <p class="hero-description">785 million people in the world live without clean water. That's nearly 1 in 10 people worldwide.</p>
+                <p class="hero-guarantee">100% of your donation funds clean water projects</p>
+                <div class="counter-wrapper">
+                    <span id="counter">13,022</span> people served
                 </div>
-                <div style="text-align:center; margin-top:0.7rem; color:#222; font-size:1.1rem;">
-                    <span id="progress-raised">$10,000</span> raised of <b>$15,000</b> goal
-                </div>
+                <a href="#donate" class="cta-button primary">Give Clean Water</a>
             </div>
         </div>
     </section>
 
     <!-- Why Water Section -->
-    <section id="why-water">
+    <section id="why-water" class="why-water-section">
         <div class="container">
-            <h2>Why Clean Water?</h2>
-            <ul>
-                <li>Health: Clean water prevents disease and saves lives.</li>
-                <li>Education: Kids, especially girls, can go to school instead of fetching water.</li>
-                <li>Opportunity: Clean water empowers entire communities to thrive.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Why Water? Education Section -->
-    <section id="why-water-education" class="why-water-education-section">
-        <div class="container">
-            <h2>Why Water?</h2>
-            <p>Clean water is the foundation of health, education, and opportunity. Without it, families are trapped in a cycle of poverty and disease.</p>
-            <a href="#science" class="cta-button secondary">See the Science</a>
-            <div class="why-water-icons">
-                <div class="icon-box">
-                    <img src="img/icon-health.png" alt="Health Icon">
-                    <p>Health</p>
+            <h2 class="section-title">Why Water?</h2>
+            <p class="section-subtitle">Access to clean water can change everything for a community</p>
+            <div class="impact-categories">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health</h3>
+                    <p>Clean water reduces waterborne diseases by 80% and protects children from early mortality.</p>
                 </div>
-                <div class="icon-box">
-                    <img src="img/icon-education.png" alt="Education Icon">
-                    <p>Education</p>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <p>When clean water is available, children can go to school instead of spending hours fetching water.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3>Women Empowerment</h3>
+                    <p>Women and girls spend hours collecting water. Providing water gives them time for education and work.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Economic Growth</h3>
+                    <p>Every dollar invested in water and sanitation projects returns $4 to the local economy.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Story Section -->
-    <section id="our-story">
+    <section id="our-story" class="story-section">
         <div class="container">
-            <h2>Our Mission</h2>
-            <p>Every day, millions of people wake up knowing they will spend hours walking to collect water that isn’t safe to drink. This daily struggle robs children of their education, parents of their livelihoods, and families of their health.</p>
-            <blockquote class="highlight-quote">"771 million people lack access to clean water. Together, we can change that."</blockquote>
-            <p>With your help, we’ve already funded thousands of water projects in communities around the world, transforming lives and creating brighter futures.</p>
-        </div>
-    </section>
-
-    <!-- Impact Stats Section -->
-    <section id="impact-stats" class="impact-stats-section">
-        <div class="container">
-            <h2>Our Impact</h2>
-            <div class="stats-container">
-                <div class="stat-box">
-                    <div class="stat-icon">
-                        <img src="img/icon-lives.png" alt="Lives Changed Icon">
-                    </div>
-                    <p class="stat-number">13,000+</p>
-                    <p class="stat-description">Lives transformed by clean water.</p>
+            <div class="story-content">
+                <div class="story-text">
+                    <h2 class="section-title">Meet Sarah</h2>
+                    <p class="story-paragraph">Sarah used to walk 3 hours every day to collect water for her family. The water was often contaminated, making her siblings sick.</p>
+                    <p class="story-paragraph">When charity: water built a well in her village, everything changed. Now Sarah attends school regularly and dreams of becoming a doctor.</p>
+                    <blockquote class="story-quote">"Water is life... Now I have time to study and dream of a better future. My family no longer gets sick from contaminated water. We can grow crops and earn income, and I return from school to see my family healthy."</blockquote>
+                    <p class="story-author">- Sarah, 12 years old</p>
                 </div>
-                <div class="stat-box">
-                    <div class="stat-icon">
-                        <img src="img/icon-projects.png" alt="Projects Completed Icon">
-                    </div>
-                    <p class="stat-number">2,500+</p>
-                    <p class="stat-description">Water projects funded worldwide.</p>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-icon">
-                        <img src="img/icon-donations.png" alt="Donations Raised Icon">
-                    </div>
-                    <p class="stat-number">$10M+</p>
-                    <p class="stat-description">Raised for clean water solutions.</p>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1594734415578-00fc9540929b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Young girl smiling with clean water">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial Section -->
-    <section id="testimonials" class="testimonial-section">
+    <!-- Impact Section with Counter -->
+    <section id="impact" class="impact-section">
         <div class="container">
-            <h2>What People Are Saying</h2>
-            <div class="testimonial-container">
-                <div class="testimonial-box">
-                    <img src="img/testimonial1.jpg" alt="Beneficiary smiling" class="testimonial-img">
-                    <blockquote>"Thanks to clean water, I can now go to school every day and dream of becoming a teacher."</blockquote>
-                    <p class="testimonial-author">- Fatima, 12 years old</p>
+            <h2 class="section-title">Our Impact</h2>
+            <p class="section-subtitle">Together, we've helped millions of people get clean water</p>
+            
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <div class="stat-number"><span id="impact-counter">13,022</span></div>
+                    <div class="stat-label">Lives Impacted</div>
                 </div>
-                <div class="testimonial-box">
-                    <img src="img/testimonial2.jpg" alt="Family with clean water" class="testimonial-img">
-                    <blockquote>"Before we had clean water, my family spent hours every day walking to fetch water that often made us sick."</blockquote>
-                    <p class="testimonial-author">- Amina, Mother of 3</p>
+                <div class="stat-item">
+                    <div class="stat-number">29,725</div>
+                    <div class="stat-label">Water Projects</div>
                 </div>
-                <div class="testimonial-box">
-                    <img src="img/testimonial3.jpg" alt="Donor smiling" class="testimonial-img">
-                    <blockquote>"Knowing that my donation directly helps families get clean water is the most rewarding feeling."</blockquote>
-                    <p class="testimonial-author">- John, Monthly Donor</p>
+                <div class="stat-item">
+                    <div class="stat-number">26</div>
+                    <div class="stat-label">Countries</div>
                 </div>
+            </div>
+            
+            <div class="impact-calculator">
+                <h3>Calculate Your Impact</h3>
+                <p>See how many lives you can change with clean water</p>
+                <div class="calculator-form">
+                    <input type="number" id="donation-amount" placeholder="Enter amount in $" min="1">
+                    <button id="calc-impact-btn" class="cta-button secondary">Calculate</button>
+                </div>
+                <p id="impact-result" class="calculator-result"></p>
             </div>
         </div>
     </section>
 
-    <!-- Success Story Section -->
-    <section class="success-story-section" style="background:#fff; padding:2.5rem 0;">
-        <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; gap:2rem;">
-            <img src="img/story-image.jpg" alt="Success Story" style="width:220px; border-radius:1.2rem; box-shadow:0 4px 24px #0099cc22;">
-            <div style="flex:1; min-width:220px;">
-                <h2 style="color:#0099cc;">A Real Story of Change</h2>
-                <p style="font-size:1.1rem; color:#333;">Fatima, age 12, used to walk miles every day for water. Now, thanks to your support, she attends school and dreams of becoming a teacher. Your donation creates real, lasting change for children like Fatima.</p>
+    <!-- Donation Section -->
+    <section id="donate" class="donate-section">
+        <div class="container">
+            <h2 class="section-title">Give Clean Water</h2>
+            <p class="donate-description">Your donation brings clean, safe drinking water to people in need around the world.</p>
+            
+            <div class="donation-options">
+                <div class="donation-type">
+                    <button class="donation-type-btn active" data-type="monthly">Monthly</button>
+                    <button class="donation-type-btn" data-type="once">One-time</button>
+                </div>
+                
+                <div class="donation-amounts">
+                    <button class="donation-amount-btn" data-amount="10">$10</button>
+                    <button class="donation-amount-btn active" data-amount="40">$40</button>
+                    <button class="donation-amount-btn" data-amount="100">$100</button>
+                    <button class="donation-amount-btn" data-amount="custom">Other</button>
+                </div>
+                
+                <a href="#" class="cta-button primary large">Donate Now</a>
+            </div>
+            
+            <div class="donation-impact-wrapper">
+                <div class="impact-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <p class="donation-impact">Your monthly donation of $40 will provide clean water to 12 people every year</p>
+                <p class="donation-guarantee"><strong>100% of your donation</strong> funds clean water projects</p>
+            </div>
+            
+            <div class="trust-indicators">
+                <p class="secure-payment"><i class="fas fa-lock"></i> Secure payment process</p>
+                <p class="transparency">We're committed to complete transparency</p>
             </div>
         </div>
     </section>
 
-    <!-- Get Involved Section -->
-    <section id="get-involved" class="get-involved-section">
-        <div class="container">
-            <h2>Get Involved</h2>
-            <!-- We use a simple column layout for beginners -->
-            <div class="involvement-list">
-                <!-- Each box is stacked vertically -->
-                <div class="involvement-box donate">
-                    <img src="img/donate.jpg" alt="Donate to change lives" class="involvement-img">
-                    <h3>Donate</h3>
-                    <p>Your gift can change lives. Every dollar counts.</p>
-                    <a href="#donate" class="cta-button">Make a Donation</a>
-                </div>
-                <div class="involvement-box fundraise">
-                    <img src="img/fundraise.jpg" alt="Fundraise for clean water" class="involvement-img">
-                    <h3>Fundraise</h3>
-                    <p>Start a fundraiser and rally your community for clean water.</p>
-                    <a href="#fundraise" class="cta-button">Start Fundraising</a>
-                </div>
-                <div class="involvement-box partner">
-                    <img src="img/partner.jpg" alt="Partner with us" class="involvement-img">
-                    <h3>Partner</h3>
-                    <p>Join us as a corporate or community partner to amplify impact.</p>
-                    <a href="#partner" class="cta-button">Become a Partner</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call-to-Action Section -->
-    <section id="cta" class="cta-section">
-        <div class="container">
-            <h2>Ready to Make a Difference?</h2>
-            <p>Start a fundraiser, donate, or spread the word. Every action brings us closer to a world where everyone has clean water.</p>
-            <a href="#" class="cta-button">Start a Fundraiser</a>
-        </div>
-    </section>
-
-    <!-- Newsletter Signup Section -->
+    <!-- Newsletter Section -->
     <section class="newsletter-section">
-        <div class="container newsletter-container">
-            <h2>Stay Updated</h2>
-            <p>Get inspiring stories and updates about clean water projects.</p>
-            <form id="newsletter-form">
-                <input type="email" id="newsletter-email" placeholder="Your email" required>
+        <div class="container">
+            <h2 class="section-title">Stay Connected</h2>
+            <p>Join our community and get updates on our projects and impact</p>
+            
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="email" id="newsletter-email" placeholder="Your email address" required>
                 <button type="submit" class="cta-button secondary">Subscribe</button>
             </form>
-            <div id="newsletter-message"></div>
+            <p id="newsletter-message" class="newsletter-message"></p>
         </div>
     </section>
 
-    <!-- Floating Water Can CTA -->
-    <a href="#cta" class="floating-cta" title="Donate Now">
-        <img src="https://cdn-icons-png.flaticon.com/512/920/920496.png" alt="Donate Water">
-    </a>
-
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer class="main-footer">
         <div class="container">
-            <p>© 2025 charity: water. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>charity: water</h2>
+                    <p>A non-profit organization bringing clean, safe drinking water to people in developing countries.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#why-water">Why Water?</a></li>
+                        <li><a href="#our-story">Our Story</a></li>
+                        <li><a href="#impact">Our Impact</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> info@charitywater.org</p>
+                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 charity: water. All rights reserved.</p>
+                <p>100% of public donations go directly to water projects.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Impact Counter Script -->
-    <script>
-      // Live impact counter (increases every 4 seconds)
-      let counter = 13022;
-      setInterval(()=>{
-        counter++;
-        var impactCounter = document.getElementById('impact-counter');
-        if(impactCounter) {
-          impactCounter.innerText = counter + " Lives Impacted";
-        }
-      }, 4000);
-    </script>
-    <!-- Newsletter JS -->
-    <script>
-      document.getElementById('newsletter-form').onsubmit = function(e) {
-          e.preventDefault();
-          var email = document.getElementById('newsletter-email').value;
-          if(email.length > 5 && email.includes('@')) {
-              document.getElementById('newsletter-message').innerText = '🎉 Thank you for subscribing!';
-              setTimeout(()=>{ document.getElementById('newsletter-message').innerText = ''; }, 3000);
-              document.getElementById('newsletter-email').value = '';
-          } else {
-              document.getElementById('newsletter-message').innerText = 'Please enter a valid email.';
-          }
-      }
-    </script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
